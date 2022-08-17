@@ -1,7 +1,7 @@
 {
-  "name": "book-keeping-app",
+  "name": "promesse",
   "version": "1.0.0",
-  "description": "Book keeping app",
+  "description": "promesse de vente des voitures",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
@@ -9,7 +9,7 @@
     "client": "npm start --prefix frontend",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "Emmanuel Tweneboah",
+  "author": "Nadine Ben Taziri",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.27.2",

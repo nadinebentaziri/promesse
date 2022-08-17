@@ -4,7 +4,7 @@ import { createCarAction } from '../../redux/actions/cars/carActions';
 
 const AddCar = () => {
   const [namevendeur, setnamevendeur] = useState('');
-  const [nameacheteur, setTnameacheteur] = useState('');
+  const [nameacheteur, setnameacheteur] = useState('');
   const [adressev, setadressev] = useState('');
   const [adressea, setadressea] = useState('');
  const [codepostalv, setcodepostalv] = useState('');
@@ -27,14 +27,14 @@ const AddCar = () => {
       namevendeur,
       nameacheteur,
       adressev,
-     // adressea,
+     adressea,
       codepostalv,
-      //codepostala,
-      //nummatricule,
-      //telvendeur,
-      //telacheteur,
-      //emailv,
-      //emaila,
+      codepostala,
+      nummatricule,
+      telvendeur,
+      telacheteur,
+      emailv,
+      emaila,
     };
     dispatch(createCarAction(data));
   };
@@ -60,7 +60,7 @@ const AddCar = () => {
               <div className='modal-content'>
                 <div className='modal-header'>
                   <h5 className='modal-title' id='exampleModalLabel'>
-                    Create Car
+                    Create Promesse
                   </h5>
                   <button
                     type='button'
@@ -75,9 +75,21 @@ const AddCar = () => {
                   <form onSubmit={handleFormSubmit}>
                     <fieldset>
                       <div className='formv'>
+                      <div className='form-group'>
+                      <label htmlFor='exampleInputEmail1'>num matricule </label>
+                      <input
+                        value={nummatricule}
+                        onChange={e => setnummatricule(e.target.value)}
+                        type='text'
+                        className='form-control'
+                        id='exampleInputEmail1'
+                        aria-describedby='emailHelp'
+                        placeholder='name'
+                      />
+                    </div>
                     <div className='form-group'>
                       
-                        <label htmlFor='exampleInputEmail1'>name vendeur </label>
+                        <label htmlFor='exampleInputEmail1'>nom vendeur </label>
                         <input
                           value={namevendeur}
                           onChange={e => setnamevendeur(e.target.value)}
@@ -85,7 +97,7 @@ const AddCar = () => {
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
-                          placeholder='Author name'
+                          placeholder='name'
                         />
                       </div>
                       <div className='form-group'>
@@ -110,12 +122,11 @@ const AddCar = () => {
                           placeholder='Book title'
                         />
                       </div>
-                      </div>
                       <div className='form-group'>
-                        <label htmlFor='exampleInputEmail1'>name acheteur </label>
+                        <label htmlFor='exampleInputEmail1'>tel vendeur </label>
                         <input
-                          value={nameacheteur}
-                          onChange={e => setTnameacheteur(e.target.value)}
+                          value={telvendeur}
+                          onChange={e => settelvendeur(e.target.value)}
                           type='text'
                           className='form-control'
                           id='exampleInputEmail1'
@@ -123,21 +134,82 @@ const AddCar = () => {
                           placeholder='Author name'
                         />
                       </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputEmail1'>email vendeur </label>
+                        <input
+                          value={emailv}
+                          onChange={e => setemailv(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder='Author name'
+                        />
+                      </div>
+                      </div>
+                      <div className='forma'>
+                    <div className='form-group'>
                       
-                      <div className='form-group'>
-                        <label htmlFor='exampleInputEmail1'>adresse acheteur </label>
+                        <label htmlFor='exampleInputEmail1'>nom acheteur </label>
                         <input
                           value={nameacheteur}
-                          onChange={e => setTnameacheteur(e.target.value)}
+                          onChange={e => setnameacheteur(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder='name'
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputPassword1'>adresse acheteur</label>
+                        <input
+                          value={adressea}
+                          onChange={e => setadressea(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputPassword1'
+                          placeholder='Book title'
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputPassword1'>code postal acheteur</label>
+                        <input
+                          value={codepostalv}
+                          onChange={e => setcodepostala(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputPassword1'
+                          placeholder='Book title'
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputEmail1'>tel acheteur </label>
+                        <input
+                          value={telacheteur}
+                          onChange={e => settelacheteur(e.target.value)}
                           type='text'
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
                           placeholder='Author name'
                         />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputEmail1'>email acheteur </label>
+                        <input
+                          value={emaila}
+                          onChange={e => setemaila(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder='Author name'
+                        />
+                      </div>
                       </div>
                       <button type='submit' className='btn btn-warning m-auto'>
-                        Create Car
+                        Create promesse
                       </button>
                     </fieldset>
                   </form>

@@ -24,8 +24,9 @@ const Cars = () => {
           <table className='table table-hover'>
             <thead>
               <tr>
-                <th scope='col'>Author</th>
-                <th scope='col'>Car Name</th>
+                <th scope='col'>nom vendeur</th>
+                <th scope='col'>nom acheteur</th>
+                <th scope='col'>num matricule</th>
                 <th scope='col'>Action</th>
                 <th scope='col'>Action</th>
               </tr>
@@ -41,8 +42,8 @@ const Cars = () => {
                         <>
                           {/* Map through here */}
                           <tr className='table-dark'>
-                            <th scope='row'>{car.title}</th>
-                            <td>{car.author}</td>
+                            <th scope='row'>{car.namevendeur}</th>
+                            <td>{car.nameacheteur}</td>
                             <td>
                               <i
                                 className='fas fa-trash '
