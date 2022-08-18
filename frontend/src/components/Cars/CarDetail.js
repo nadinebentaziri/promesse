@@ -11,10 +11,17 @@ const CarDetail = ({ history }) => {
 
   const { car, loading } = carDetails;
 
-  const [category, setCategory] = useState(car && !loading && car.category);
-  const [title, setTitle] = useState(car && !loading && car.title);
-  const [author, setAuthor] = useState(car && car.author);
-
+  const [namevendeur, setnamevendeur] = useState(car && !loading && car.namevendeur);
+  const [nameacheteur, setnameacheteur] = useState(car && !loading && car.nameacheteur);
+  const [adressev, setadressev] = useState(car && car.adressev);
+  const [adressea, setadressea] = useState(car && car.adressea);
+  const [codepostalv, setcodepostalv] = useState(car && car.codepostalv);
+  const [codepostala, setcodepostala] = useState(car && car.codepostala);
+  const [nummatricule, setnummatricule] = useState(car && car.nummatricule);
+  const [telvendeur, settelvendeur] = useState(car && car.telvendeur);
+  const [telacheteur, settelacheteur] = useState(car && car.telacheteur);
+  const [emailv, setemailv] = useState(car && car.emailv);
+  const [emaila, setemaila] = useState(car && car.emaila);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCar(id));
@@ -24,9 +31,17 @@ const CarDetail = ({ history }) => {
 
   const formSubmitHandler = e => {
     const data = {
-      category,
-      title,
-      author,
+      namevendeur,
+      nameacheteur,
+      adressev,
+     adressea,
+      codepostalv,
+      codepostala,
+      nummatricule,
+      telvendeur,
+      telacheteur,
+      emailv,
+      emaila,
     };
     e.preventDefault();
     dispatch(updateCar(id, data));
@@ -36,47 +51,147 @@ const CarDetail = ({ history }) => {
     <div className='row container-height'>
       <div className='col-lg-6 col-md-6 m-auto'>
         <div className='container'>
-          {book ? (
+          {car ? (
             <>
               <h1 className='text-center'>Update</h1>
               <form onSubmit={formSubmitHandler}>
                 <fieldset>
-                  <div className='form-group'>
-                    <select
-                      value={category}
-                      onChange={e => setCategory(e.target.value)}
-                      className='custom-select'>
-                      <option defaultValue='programming'>programming</option>
-                      <option value='religion'>Religion</option>
-                      <option value='life'>life</option>
-                      <option value='culture'>culture</option>
-                    </select>
-                  </div>
-                  <div className='form-group'>
-                    <label htmlFor='exampleInputEmail1'>Author </label>
-                    <input
-                      value={author}
-                      onChange={e => setAuthor(e.target.value)}
-                      type='text'
-                      className='form-control'
-                      id='exampleInputEmail1'
-                      aria-describedby='emailHelp'
-                      placeholder='Author name'
-                    />
-                  </div>
-                  <div className='form-group'>
-                    <label htmlFor='exampleInputPassword1'>title</label>
-                    <input
-                      value={title}
-                      onChange={e => setTitle(e.target.value)}
-                      type='text'
-                      className='form-control'
-                      id='exampleInputPassword1'
-                      placeholder='Book title'
-                    />
-                  </div>
+                <div className='formv'>
+                      <div className='form-group'>
+                      <label htmlFor='exampleInputEmail1'>num matricule </label>
+                      <input
+                        value={nummatricule}
+                        onChange={e => setnummatricule(e.target.value)}
+                        type='text'
+                        className='form-control'
+                        id='exampleInputEmail1'
+                        aria-describedby='emailHelp'
+                        placeholder=''
+                      />
+                    </div>
+                    <div className='form-group'>
+                      
+                        <label htmlFor='exampleInputEmail1'>nom vendeur </label>
+                        <input
+                          value={namevendeur}
+                          onChange={e => setnamevendeur(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputPassword1'>adresse vendeur</label>
+                        <input
+                          value={adressev}
+                          onChange={e => setadressev(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputPassword1'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputPassword1'>code postal vendeur</label>
+                        <input
+                          value={codepostalv}
+                          onChange={e => setcodepostalv(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputPassword1'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputEmail1'>tel vendeur </label>
+                        <input
+                          value={telvendeur}
+                          onChange={e => settelvendeur(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputEmail1'>email vendeur </label>
+                        <input
+                          value={emailv}
+                          onChange={e => setemailv(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder=''
+                        />
+                      </div>
+                      </div>
+                      <div className='forma'>
+                    <div className='form-group'>
+                      
+                        <label htmlFor='exampleInputEmail1'>nom acheteur </label>
+                        <input
+                          value={nameacheteur}
+                          onChange={e => setnameacheteur(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputPassword1'>adresse acheteur</label>
+                        <input
+                          value={adressea}
+                          onChange={e => setadressea(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputPassword1'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputPassword1'>code postal acheteur</label>
+                        <input
+                          value={codepostalv}
+                          onChange={e => setcodepostala(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputPassword1'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputEmail1'>tel acheteur </label>
+                        <input
+                          value={telacheteur}
+                          onChange={e => settelacheteur(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder=''
+                        />
+                      </div>
+                      <div className='form-group'>
+                        <label htmlFor='exampleInputEmail1'>email acheteur </label>
+                        <input
+                          value={emaila}
+                          onChange={e => setemaila(e.target.value)}
+                          type='text'
+                          className='form-control'
+                          id='exampleInputEmail1'
+                          aria-describedby='emailHelp'
+                          placeholder=''
+                        />
+                      </div>
+                      </div>
                   <button type='submit' className='btn btn-dark m-auto'>
-                    Create Car
+                    Create promesse
                   </button>
                 </fieldset>
               </form>

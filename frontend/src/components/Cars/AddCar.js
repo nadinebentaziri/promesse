@@ -84,7 +84,7 @@ const AddCar = () => {
                         className='form-control'
                         id='exampleInputEmail1'
                         aria-describedby='emailHelp'
-                        placeholder='name'
+                        placeholder=''
                       />
                     </div>
                     <div className='form-group'>
@@ -97,7 +97,7 @@ const AddCar = () => {
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
-                          placeholder='name'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -108,7 +108,7 @@ const AddCar = () => {
                           type='text'
                           className='form-control'
                           id='exampleInputPassword1'
-                          placeholder='Book title'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -119,7 +119,7 @@ const AddCar = () => {
                           type='text'
                           className='form-control'
                           id='exampleInputPassword1'
-                          placeholder='Book title'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -131,7 +131,7 @@ const AddCar = () => {
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
-                          placeholder='Author name'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -143,7 +143,7 @@ const AddCar = () => {
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
-                          placeholder='Author name'
+                          placeholder=''
                         />
                       </div>
                       </div>
@@ -158,7 +158,7 @@ const AddCar = () => {
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
-                          placeholder='name'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -169,7 +169,7 @@ const AddCar = () => {
                           type='text'
                           className='form-control'
                           id='exampleInputPassword1'
-                          placeholder='Book title'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -180,7 +180,7 @@ const AddCar = () => {
                           type='text'
                           className='form-control'
                           id='exampleInputPassword1'
-                          placeholder='Book title'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -192,7 +192,7 @@ const AddCar = () => {
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
-                          placeholder='Author name'
+                          placeholder=''
                         />
                       </div>
                       <div className='form-group'>
@@ -204,7 +204,7 @@ const AddCar = () => {
                           className='form-control'
                           id='exampleInputEmail1'
                           aria-describedby='emailHelp'
-                          placeholder='Author name'
+                          placeholder=''
                         />
                       </div>
                       </div>
